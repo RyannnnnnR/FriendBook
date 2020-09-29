@@ -17,6 +17,7 @@
       </list>
     </option>
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.3" />
   <component name="ProjectId" id="1iBO7Vm9Dp3DU7AGTCdVTeA4aOy" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -26,7 +27,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/partials" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Start Server" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$" port="8080">
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -36,11 +48,45 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1601377351954</updated>
-      <workItem from="1601377352983" duration="279000" />
+      <workItem from="1601377352983" duration="8970000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="389" y="66" key="#PHP" timestamp="1601379326677">
+      <screen x="0" y="23" width="1440" height="785" />
+    </state>
+    <state x="389" y="66" key="#PHP/0.23.1440.785@0.23.1440.785" timestamp="1601379326677" />
+    <state x="184" y="77" width="1071" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601379237372">
+      <screen x="0" y="23" width="1440" height="785" />
+    </state>
+    <state x="184" y="77" width="1071" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.785@0.23.1440.785" timestamp="1601379237372" />
+    <state width="1398" height="200" key="GridCell.Tab.0.bottom" timestamp="1601385268028">
+      <screen x="0" y="23" width="1440" height="785" />
+    </state>
+    <state width="1398" height="200" key="GridCell.Tab.0.bottom/0.23.1440.785@0.23.1440.785" timestamp="1601385268028" />
+    <state width="1398" height="200" key="GridCell.Tab.0.center" timestamp="1601385268028">
+      <screen x="0" y="23" width="1440" height="785" />
+    </state>
+    <state width="1398" height="200" key="GridCell.Tab.0.center/0.23.1440.785@0.23.1440.785" timestamp="1601385268028" />
+    <state width="1398" height="200" key="GridCell.Tab.0.left" timestamp="1601385268027">
+      <screen x="0" y="23" width="1440" height="785" />
+    </state>
+    <state width="1398" height="200" key="GridCell.Tab.0.left/0.23.1440.785@0.23.1440.785" timestamp="1601385268027" />
+    <state width="1398" height="200" key="GridCell.Tab.0.right" timestamp="1601385268028">
+      <screen x="0" y="23" width="1440" height="785" />
+    </state>
+    <state width="1398" height="200" key="GridCell.Tab.0.right/0.23.1440.785@0.23.1440.785" timestamp="1601385268028" />
+    <state x="442" y="148" key="NewPhpClassDialog" timestamp="1601378288596">
+      <screen x="0" y="23" width="1440" height="785" />
+    </state>
+    <state x="442" y="148" key="NewPhpClassDialog/0.23.1440.785@0.23.1440.785" timestamp="1601378288596" />
+    <state x="539" y="346" key="NewPhpFileDialog" timestamp="1601383647405">
+      <screen x="0" y="23" width="1440" height="785" />
+    </state>
+    <state x="539" y="346" key="NewPhpFileDialog/0.23.1440.785@0.23.1440.785" timestamp="1601383647405" />
   </component>
 </project>
