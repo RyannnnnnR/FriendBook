@@ -1,4 +1,4 @@
-<form action="authentication.php?signup=1" method="POST">
+<form action="authentication.php?auth_method=sign_up" method="POST">
     <div class="flex flex-col mt-4">
         <label for="posId" class="text-xs leading-5 text-gray-500">Email</label>
         <div class="mt-1">

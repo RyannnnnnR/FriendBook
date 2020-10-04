@@ -7,7 +7,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-gray-800">
-    <?php include ('partials/navbar.php') ?>
+    <div class="text-white">
+    <?php
+        include ('partials/navbar.php');
+        include ('helpers/QueryBuilder.php');
+        include('helpers/Schema.php');
+        QueryBuilder::create('test', Schema::FRIEND_COLUMNS)->toString();
+    ?>
+    </div>
     <div class="flex mt-6">
         <div class="w-1/2 ml-6 mr-12">
         <main class="mt-10 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
