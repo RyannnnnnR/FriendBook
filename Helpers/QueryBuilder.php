@@ -27,13 +27,12 @@ class QueryBuilder
     {
         $query = "CREATE TABLE IF NOT  EXISTS $table (";
         $tmp = array();
-        foreach ($columns as $column) {
-            $column = self::processColumn($column);
+        foreach ($columns as $key => $column) {
+            $column = self::processColumn($key, $column);
             $tmp[] = implode(" ", $column);
         }
         $query .= implode(", ", $tmp) . ");";
         $query = strtr($query, self::$tokens);
-        echo $query;
         return new QueryBuilder($query, null);
     }
 
@@ -59,10 +58,14 @@ class QueryBuilder
         $this->connection->execute($this->toString());
     }
 
-    private function processColumn($column)
+    private function processColumn($key, $column)
     {
-        if (!in_array("nullable", $column)) array_push($column, "NOT NULL");
-        return array_map(function ($v) {
+        array_unshift($column, $key);
+        if (!in_array("nullable", $column)) {
+            array_push($column, "NOT NULL");
+        }
+        return array_map(function ($v) use($key) {
+            if ($v == $key) return  $v;
             if (strpos($v, "string") !== false) {
                 $split = explode('=', $v);
                 if ($split[1] == null) {

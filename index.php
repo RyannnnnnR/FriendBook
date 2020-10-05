@@ -12,7 +12,6 @@
         include ('partials/navbar.php');
         include ('helpers/QueryBuilder.php');
         include('helpers/Schema.php');
-        QueryBuilder::create('test', Schema::FRIEND_COLUMNS)->toString();
     ?>
     </div>
     <div class="flex mt-6">
@@ -41,7 +40,7 @@
             <div class="bg-white rounded-lg">
                 <div class="p-8 pb-8">
                 <div class="mt-2 mb-6">
-                    <a href="#" class="hover:border-gray-600 hover:text-gray-600 block text-gray-800 w-full border border-gray-800 rounded-md py-2 mt-1 cursor-pointer focus:outline-none text-center">Log in</a>
+                    <a href="login.php" class="hover:border-gray-600 hover:text-gray-600 block text-gray-800 w-full border border-gray-800 rounded-md py-2 mt-1 cursor-pointer focus:outline-none text-center">Log in</a>
                 </div>
                 <div class="mb-4">
                     <div class="border-b border-gray-500 text-center w-full mt-1 mx-0 mb-2" style="line-height: 0.1em;"><span class=" text-sm bg-white px-3 py-0 text-bg-700">OR</span></div>
