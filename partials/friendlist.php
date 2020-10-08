@@ -17,7 +17,7 @@
                 </div>
             </div>
             <div class="text-center border-t border-gray-500 text-gray-500 hover:text-gray-400">
-                <a href="" class="w-full py-3 flex justify-center items-center"><svg class="w-6 h-6 text-gray-400 inline-block mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z"></path></svg><span>Remove Friend</span></a>
+                <a href="" class="w-full py-3 flex justify-center items-center"><svg class="w-6 h-6 text-gray-400 inline-block mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M11 6a3 3 0 11-6 0 3 3 0 016 0zM14 17a6 6 0 00-12 0h12zM13 8a1 1 0 100 2h4a1 1 0 100-2h-4z"></path></svg><span>Remove Friend</span></a>
             </div>
         </div>
     </div>
@@ -35,7 +35,7 @@
                 </div>
             </div>
             <div class="text-center border-t border-gray-500 text-gray-500 hover:text-gray-400">
-                <a href="" class="w-full py-3 flex justify-center items-center"><svg class="w-6 h-6 text-gray-400 inline-block mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z"></path></svg><span>Remove Friend</span></a>
+                <a href="" class="w-full py-3 flex justify-center items-center"><svg class="w-6 h-6 text-gray-400 inline-block mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M11 6a3 3 0 11-6 0 3 3 0 016 0zM14 17a6 6 0 00-12 0h12zM13 8a1 1 0 100 2h4a1 1 0 100-2h-4z"></path></svg><span>Remove Friend</span></a>
             </div>
         </div>
     </div>
@@ -53,7 +53,7 @@
                 </div>
             </div>
             <div class="text-center border-t border-gray-500 text-gray-500 hover:text-gray-400">
-                <a href="" class="w-full py-3 flex justify-center items-center"><svg class="w-6 h-6 text-gray-400 inline-block mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z"></path></svg><span>Remove Friend</span></a>
+                <a href="" class="w-full py-3 flex justify-center items-center"><svg class="w-6 h-6 text-gray-400 inline-block mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M11 6a3 3 0 11-6 0 3 3 0 016 0zM14 17a6 6 0 00-12 0h12zM13 8a1 1 0 100 2h4a1 1 0 100-2h-4z"></path></svg><span>Remove Friend</span></a>
             </div>
         </div>
     </div>
@@ -71,7 +71,7 @@
                 </div>
             </div>
             <div class="text-center border-t border-gray-500 text-gray-500 hover:text-gray-400">
-                <a href="" class="w-full py-3 flex justify-center items-center"><svg class="w-6 h-6 text-gray-400 inline-block mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z"></path></svg><span>Remove Friend</span></a>
+                <a href="" class="w-full py-3 flex justify-center items-center"><svg class="w-6 h-6 text-gray-400 inline-block mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M11 6a3 3 0 11-6 0 3 3 0 016 0zM14 17a6 6 0 00-12 0h12zM13 8a1 1 0 100 2h4a1 1 0 100-2h-4z"></path></svg><span>Remove Friend</span></a>
             </div>
         </div>
     </div>
@@ -89,7 +89,7 @@
                 </div>
             </div>
             <div class="text-center border-t border-gray-500 text-gray-500 hover:text-gray-400">
-                <a href="" class="w-full py-3 flex justify-center items-center"><svg class="w-6 h-6 text-gray-400 inline-block mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z"></path></svg><span>Remove Friend</span></a>
+                <a href="" class="w-full py-3 flex justify-center items-center"><svg class="w-6 h-6 text-gray-400 inline-block mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M11 6a3 3 0 11-6 0 3 3 0 016 0zM14 17a6 6 0 00-12 0h12zM13 8a1 1 0 100 2h4a1 1 0 100-2h-4z"></path></svg><span>Remove Friend</span></a>
             </div>
         </div>
     </div>
@@ -107,7 +107,7 @@
                 </div>
             </div>
             <div class="text-center border-t border-gray-500 text-gray-500 hover:text-gray-400">
-                <a href="" class="w-full py-3 flex justify-center items-center"><svg class="w-6 h-6 text-gray-400 inline-block mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z"></path></svg><span>Remove Friend</span></a>
+                <a href="" class="w-full py-3 flex justify-center items-center"><svg class="w-6 h-6 text-gray-400 inline-block mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M11 6a3 3 0 11-6 0 3 3 0 016 0zM14 17a6 6 0 00-12 0h12zM13 8a1 1 0 100 2h4a1 1 0 100-2h-4z"></path></svg><span>Remove Friend</span></a>
             </div>
         </div>
     </div>
