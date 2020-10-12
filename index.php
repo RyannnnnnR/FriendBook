@@ -10,8 +10,8 @@
     <div class="text-white">
     <?php
         include ('partials/navbar.php');
-        include ('helpers/QueryBuilder.php');
-        include('helpers/Schema.php');
+        include ('helpers/Schema.php');
+        Schema::init();
     ?>
     </div>
     <div class="flex mt-6">

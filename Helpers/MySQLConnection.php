@@ -13,7 +13,7 @@ class MySQLConnection {
 
     public function __construct()
     {
-//        $this->connection = mysqli_connect(self::DB_HOST, self::DB_USER, self::DB_PASS, self::DB_NAME);
+        $this->connection = mysqli_connect(self::DB_HOST, self::DB_USER, self::DB_PASS, self::DB_NAME);
     }
 
     public static function getInstance() {
@@ -24,9 +24,16 @@ class MySQLConnection {
     }
 
     public function execute($query){
-        mysqli_query($this->connection, $query);
+        echo  $query;
+        return mysqli_query($this->connection, $query) or die("Error executing query ". mysqli_error($this->connection));
     }
 
+    public function get($query){
+        $result = $this->execute($query);
+        $tmp = mysqli_fetch_all($result);
+        mysqli_free_result($result);
+        return $tmp;
+    }
     public function closeConnection() {
         if($this->connection != null)
             mysqli_close($this->connection);

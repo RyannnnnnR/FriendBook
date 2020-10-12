@@ -20,7 +20,8 @@ class QueryBuilder
 
     public static function table($table)
     {
-        return new QueryBuilder(null, $table);
+        $query =  "SELECT %s FROM $table";
+        return new QueryBuilder($query, $table);
     }
 
     public static function create($table, $columns)
@@ -38,13 +39,31 @@ class QueryBuilder
 
     public function select($columns = ['*'])
     {
-        $this->columns = $columns;
+        $this->query = sprintf($this->query, implode($columns, ","));
         return $this;
     }
 
-    public function where($columns, $operator = null, $value = null, $boolean = 'and')
+    /**
+     *
+     * @param $columns
+     * @param null $operator
+     * @param null $value
+     * @param string $condition
+     * @return $this
+     * @throws Exception
+     */
+    public function where($columns, $operator = null, $value = null, $condition = 'AND')
     {
-        $this->wheres = $columns;
+        if(strpos($this->query, "SELECT") !== 0) throw new Exception("Cannot call where on non select queries");
+        $query = "";
+        if (is_array($columns)) {
+            foreach ($columns as $key => $value) {
+                $query .= strpos($this->query, "WHERE") === false ? " WHERE ". implode($value, " ") : "$key $columns $operator $value";;
+            }
+        } else {
+            $query = strpos($this->query, "WHERE") === false ? " WHERE $columns $operator $value" :" $condition $columns $operator $value";;
+        }
+        $this->query .= $query;
         return $this;
     }
 
@@ -58,15 +77,26 @@ class QueryBuilder
         $this->connection->execute($this->toString());
     }
 
+    public function get()
+    {
+        $this->connection->get();
+    }
+
     private function processColumn($key, $column)
     {
         array_unshift($column, $key);
         if (!in_array("nullable", $column)) {
             array_push($column, "NOT NULL");
         }
+        // This doesn't scale very well.
         return array_map(function ($v) use($key) {
-            if ($v == $key) return  $v;
-            if (strpos($v, "string") !== false) {
+            if ($v == $key) {
+                return  sprintf("`%s`",$v);
+            }
+            else if ($v == 'increment') {
+                return 'integer '.$v;
+            }
+            else if (strpos($v, "string") !== false) {
                 $split = explode('=', $v);
                 if ($split[1] == null) {
                     $split[1] = 255;
