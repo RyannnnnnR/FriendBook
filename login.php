@@ -15,7 +15,7 @@
                     Login
                 </h2>
             </div>
-            <form action="#" class="mt-4" method="POST">
+            <form action="authentication.php?method=login" class="mt-4" method="POST">
                 <div class="rounded-md shadow-sm">
                     <div>
                         <input aria-label="Email address" name="email" type="email" required class="text-sm appearance-none rounded-none relative block w-full px-3 py-2 bg-gray-700 border border-transparent placeholder-gray-500 text-gray-300 rounded-t-md focus:outline-none focus:shadow-outline-red focus:border-blue-300 focus:z-20" placeholder="Email address">

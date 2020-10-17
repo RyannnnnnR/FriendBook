@@ -28,7 +28,7 @@
                 </p>
                 <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                     <div class="rounded-md shadow">
-                        <a href="#" class="w-full hover:text-gray-600 flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-white text-gray-900 focus:outline-none md:py-4 md:text-lg md:px-10">
+                        <a href="about.php" class="w-full hover:text-gray-600 flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-white text-gray-900 focus:outline-none md:py-4 md:text-lg md:px-10">
                             About →
                         </a>
                     </div>

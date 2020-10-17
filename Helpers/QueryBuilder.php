@@ -4,7 +4,6 @@
 class QueryBuilder
 {
     private $table;
-    private $wheres;
     private $connection;
     private static $tokens = array("pk" => "PRIMARY KEY", "increment" => "AUTO_INCREMENT", "string" => "VARCHAR", 'nullable' => "NULL", "integer" => "INT");
     private $query;
@@ -40,6 +39,19 @@ class QueryBuilder
     public function select($columns = ['*'])
     {
         $this->query = sprintf($this->query, implode($columns, ","));
+        return $this;
+    }
+
+    public function insert($data, $ignore = false)
+    {
+        $query = "INSERT". ($ignore ? " IGNORE ": ""). "INTO $this->table (%s) VALUES (%s)";
+        $columns = [];
+        $values = [];
+        foreach ($data as $key => $value){
+            $columns[] = $key;
+            $values[] = "'".$value."'";
+        }
+        $this->query = sprintf($query, implode($columns, ","), implode($values, ","));
         return $this;
     }
 
@@ -79,7 +91,7 @@ class QueryBuilder
 
     public function get()
     {
-        $this->connection->get();
+        return $this->connection->get();
     }
 
     private function processColumn($key, $column)

@@ -24,7 +24,6 @@ class MySQLConnection {
     }
 
     public function execute($query){
-        echo  $query;
         return mysqli_query($this->connection, $query) or die("Error executing query ". mysqli_error($this->connection));
     }
 
