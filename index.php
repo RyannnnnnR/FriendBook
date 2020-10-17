@@ -10,7 +10,7 @@
     <div class="text-white">
     <?php
         include ('partials/navbar.php');
-        include ('helpers/Schema.php');
+        include('helpers/Schema.php');
         Schema::init();
     ?>
     </div>

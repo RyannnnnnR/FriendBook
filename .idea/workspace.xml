@@ -21,12 +21,13 @@
   <component name="ChangeListManager">
     <list default="true" id="7e45ec71-514c-43fd-a6ac-df2d3f367715" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helpers/MySQLConnection.php" beforeDir="false" afterPath="$PROJECT_DIR$/Helpers/MySQLConnection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helpers/QueryBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/Helpers/QueryBuilder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helpers/Schema.php" beforeDir="false" afterPath="$PROJECT_DIR$/Helpers/Schema.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helpers/MySQLConnection.php" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/MySQLConnection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helpers/QueryBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/QueryBuilder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helpers/Schema.php" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/Schema.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helpers/UserManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/UserManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication.php" beforeDir="false" afterPath="$PROJECT_DIR$/authentication.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +88,7 @@
       <workItem from="1602072258053" duration="19355000" />
       <workItem from="1602470348390" duration="7311000" />
       <workItem from="1602920462477" duration="284000" />
-      <workItem from="1602920763425" duration="5797000" />
+      <workItem from="1602920763425" duration="9154000" />
     </task>
     <servers />
   </component>
@@ -115,36 +116,36 @@
       <screen x="0" y="23" width="1440" height="785" />
     </state>
     <state x="184" y="77" width="1071" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.785@0.23.1440.785" timestamp="1601379237372" />
-    <state width="1398" height="203" key="GridCell.Tab.0.bottom" timestamp="1602921335605">
+    <state width="1398" height="203" key="GridCell.Tab.0.bottom" timestamp="1602936368424">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
     <state width="1398" height="200" key="GridCell.Tab.0.bottom/0.23.1440.785@0.23.1440.785" timestamp="1601425804809" />
-    <state width="1398" height="203" key="GridCell.Tab.0.bottom/0.23.1440.799@0.23.1440.799" timestamp="1602921335605" />
-    <state width="1398" height="203" key="GridCell.Tab.0.center" timestamp="1602921335605">
+    <state width="1398" height="203" key="GridCell.Tab.0.bottom/0.23.1440.799@0.23.1440.799" timestamp="1602936368424" />
+    <state width="1398" height="203" key="GridCell.Tab.0.center" timestamp="1602936368423">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
     <state width="1398" height="200" key="GridCell.Tab.0.center/0.23.1440.785@0.23.1440.785" timestamp="1601425804809" />
-    <state width="1398" height="203" key="GridCell.Tab.0.center/0.23.1440.799@0.23.1440.799" timestamp="1602921335605" />
-    <state width="1398" height="203" key="GridCell.Tab.0.left" timestamp="1602921335604">
+    <state width="1398" height="203" key="GridCell.Tab.0.center/0.23.1440.799@0.23.1440.799" timestamp="1602936368423" />
+    <state width="1398" height="203" key="GridCell.Tab.0.left" timestamp="1602936368419">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
     <state width="1398" height="200" key="GridCell.Tab.0.left/0.23.1440.785@0.23.1440.785" timestamp="1601425804808" />
-    <state width="1398" height="203" key="GridCell.Tab.0.left/0.23.1440.799@0.23.1440.799" timestamp="1602921335604" />
-    <state width="1398" height="203" key="GridCell.Tab.0.right" timestamp="1602921335605">
+    <state width="1398" height="203" key="GridCell.Tab.0.left/0.23.1440.799@0.23.1440.799" timestamp="1602936368419" />
+    <state width="1398" height="203" key="GridCell.Tab.0.right" timestamp="1602936368423">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
     <state width="1398" height="200" key="GridCell.Tab.0.right/0.23.1440.785@0.23.1440.785" timestamp="1601425804809" />
-    <state width="1398" height="203" key="GridCell.Tab.0.right/0.23.1440.799@0.23.1440.799" timestamp="1602921335605" />
-    <state x="442" y="150" key="NewPhpClassDialog" timestamp="1602921600866">
+    <state width="1398" height="203" key="GridCell.Tab.0.right/0.23.1440.799@0.23.1440.799" timestamp="1602936368423" />
+    <state x="442" y="150" key="NewPhpClassDialog" timestamp="1602939688712">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
     <state x="442" y="148" key="NewPhpClassDialog/0.23.1440.785@0.23.1440.785" timestamp="1601771957358" />
-    <state x="442" y="150" key="NewPhpClassDialog/0.23.1440.799@0.23.1440.799" timestamp="1602921600866" />
-    <state x="539" y="352" key="NewPhpFileDialog" timestamp="1602921256493">
+    <state x="442" y="150" key="NewPhpClassDialog/0.23.1440.799@0.23.1440.799" timestamp="1602939688712" />
+    <state x="539" y="352" key="NewPhpFileDialog" timestamp="1602939673907">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
     <state x="539" y="346" key="NewPhpFileDialog/0.23.1440.785@0.23.1440.785" timestamp="1601383647405" />
-    <state x="539" y="352" key="NewPhpFileDialog/0.23.1440.799@0.23.1440.799" timestamp="1602921256493" />
+    <state x="539" y="352" key="NewPhpFileDialog/0.23.1440.799@0.23.1440.799" timestamp="1602939673907" />
     <state x="221" y="54" key="SettingsEditor" timestamp="1601462479519">
       <screen x="0" y="23" width="1440" height="785" />
     </state>

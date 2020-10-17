@@ -19,8 +19,7 @@ class QueryBuilder
 
     public static function table($table)
     {
-        $query =  "SELECT %s FROM $table";
-        return new QueryBuilder($query, $table);
+        return new QueryBuilder(null, $table);
     }
 
     public static function create($table, $columns)
@@ -38,7 +37,8 @@ class QueryBuilder
 
     public function select($columns = ['*'])
     {
-        $this->query = sprintf($this->query, implode($columns, ","));
+        $query = "SELECT %s FROM $this->table";
+        $this->query = sprintf($query, implode($columns, ","));
         return $this;
     }
 
@@ -91,7 +91,7 @@ class QueryBuilder
 
     public function get()
     {
-        return $this->connection->get();
+        return $this->connection->get($this->toString());
     }
 
     private function processColumn($key, $column)

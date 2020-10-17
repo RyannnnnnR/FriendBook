@@ -24,12 +24,16 @@ class MySQLConnection {
     }
 
     public function execute($query){
-        return mysqli_query($this->connection, $query) or die("Error executing query ". mysqli_error($this->connection));
+        $result = mysqli_query($this->connection, $query);
+        if(mysqli_error($this->connection)) {
+            die("Error executing query: ". mysqli_error($this->connection));
+        }
+        return $result;
     }
 
-    public function get($query){
+    public function get($query, $mode = MYSQLI_ASSOC){
         $result = $this->execute($query);
-        $tmp = mysqli_fetch_all($result);
+        $tmp = mysqli_fetch_all($result, $mode);
         mysqli_free_result($result);
         return $tmp;
     }
