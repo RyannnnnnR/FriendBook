@@ -21,13 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="7e45ec71-514c-43fd-a6ac-df2d3f367715" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helpers/MySQLConnection.php" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/MySQLConnection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helpers/QueryBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/QueryBuilder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helpers/Schema.php" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/Schema.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helpers/UserManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/UserManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication.php" beforeDir="false" afterPath="$PROJECT_DIR$/authentication.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helpers/MySQLConnection.php" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/MySQLConnection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helpers/QueryBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/QueryBuilder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helpers/UserManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/UserManager.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +84,7 @@
       <workItem from="1602072258053" duration="19355000" />
       <workItem from="1602470348390" duration="7311000" />
       <workItem from="1602920462477" duration="284000" />
-      <workItem from="1602920763425" duration="9154000" />
+      <workItem from="1602920763425" duration="10334000" />
     </task>
     <servers />
   </component>
@@ -150,10 +146,10 @@
       <screen x="0" y="23" width="1440" height="785" />
     </state>
     <state x="221" y="54" key="SettingsEditor/0.23.1440.785@0.23.1440.785" timestamp="1601462479519" />
-    <state x="421" y="177" width="598" height="490" key="find.popup" timestamp="1602921509993">
+    <state x="421" y="177" width="598" height="522" key="find.popup" timestamp="1602943924739">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
-    <state x="421" y="177" width="598" height="490" key="find.popup/0.23.1440.799@0.23.1440.799" timestamp="1602921509993" />
+    <state x="421" y="177" width="598" height="522" key="find.popup/0.23.1440.799@0.23.1440.799" timestamp="1602943924739" />
     <state x="544" y="212" key="refactoring.ChangeSignatureDialog" timestamp="1601807137872">
       <screen x="0" y="23" width="1440" height="799" />
     </state>

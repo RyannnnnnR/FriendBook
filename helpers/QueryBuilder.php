@@ -12,7 +12,7 @@ class QueryBuilder
     public function __construct($query, $table)
     {
         require_once('MySQLConnection.php');
-        $this->connection = MySQLConnection::getInstance();
+        $this->connection = new MySQLConnection();
         $this->query = $query;
         $this->table = $table;
     }

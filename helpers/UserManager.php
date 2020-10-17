@@ -3,8 +3,7 @@
 
 class UserManager
 {
-    private $users;
-
+    private $users = null;
     public function __construct()
     {
         include_once ('QueryBuilder.php');
