@@ -1,3 +1,7 @@
+<?php
+include_once ('managers/SessionManager.php');
+SessionManager::start();
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -23,6 +27,9 @@
             <a href="profile.php?action=add_friends" class="px-3 py-2 mx-2 <?php echo $action == "add_friends" ? "bg-blue-200 text-blue-800 rounded-md font-medium" : ""?> text-sm">Add Friends</a>
         </div>
         <?php
+            include_once ('managers/FriendManager.php');
+            $manager = new FriendManager(SessionManager::getAuthenticatedUser());
+            print_r($manager->findMutualFriends(19));
             if($action == "my_friends") {
                 include "partials/friendlist.php";
             } else if ($action == 'add_friends') {

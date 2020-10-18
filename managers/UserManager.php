@@ -6,7 +6,7 @@ class UserManager
     private $users = null;
     public function __construct()
     {
-        include_once ('QueryBuilder.php');
+        include_once('QueryBuilder.php');
         $this->users = QueryBuilder::table('friends')->select()->get();
     }
 

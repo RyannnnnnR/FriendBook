@@ -13,6 +13,10 @@ class SessionManager
     public static function setAuthenticatedUser($user_id) {
         $_SESSION['user'] = $user_id;
     }
+
+    public static function isAuthenticatedUser() {
+        return self::getAuthenticatedUser() != -1;
+    }
     public static function clear() {
         session_unset();
         session_destroy();
