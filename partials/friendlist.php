@@ -1,18 +1,24 @@
-
+<?php
+$manager = new FriendManager();
+$page = 1;
+if(isset($_GET['page']))
+    $page = $_GET['page'];
+?>
 <div>
     <h2 class="text-2xl leading-5 my-6">My Friends</h2>
 </div>
 <div class="grid grid-flow-row grid-cols-3 gap-6 mt-6">
-    <div class="bg-gray-700 shadow overflow-hidden sm:rounded-lg">
+    <?php foreach ($manager->paginate($page) as $user) { ?>
+        <div class="bg-gray-700 shadow overflow-hidden sm:rounded-lg">
         <div class="shadow-md h-full">
             <div class="p-6">
                 <div class="flex  justify-between">
                     <div class="">
-                        <h4 class="text-gray-400 inline">Joe Rogan </span></h4>
-                        <p class="text-gray-200 text-sm">joe.rogan@gmail.com</p>
+                        <h4 class="text-gray-400 inline"><?php echo $user->getDisplayName()?> </span></h4>
+                        <p class="text-gray-200 text-sm"><?php echo $user->getEmail()?></p>
                     </div>
                     <div>
-                        <img src="http://api.adorable.io/avatars/285/abbot.png" alt="" class="rounded-full h-12 w-12">
+                        <img src="<?php echo $user->getAvatarUrl()?>" alt="" class="rounded-full h-12 w-12">
                     </div>
                 </div>
             </div>
@@ -21,4 +27,5 @@
             </div>
         </div>
     </div>
+    <?php } ?>
 </div>

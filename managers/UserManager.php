@@ -6,16 +6,29 @@ class UserManager
     private $users = null;
     public function __construct()
     {
-        include_once('QueryBuilder.php');
-        $this->users = QueryBuilder::table('friends')->select()->get();
+        include_once('helpers/QueryBuilder.php');
+        $this->users = QueryBuilder::table('friends')->select()->toUsers();
     }
 
-    public function findUser($email, $pass) {
+    public function findUserByEmail($email, $pass) {
         foreach ($this->users as $user) {
-            if($user['friend_email'] == $email && $user['password'] == $pass){
-                return $user['friend_id'];
+            if($user->getEmail() == $email && $user->getPassword() == $pass){
+                return $user;
             }
         }
         return -1;
+    }
+    public function findUserById($id) {
+        $tmp =  $this->users;
+        $index  = 0;
+        foreach ($tmp as $user) {
+            if($user->getId() == $id){
+                $needle = $user;
+                unset($tmp[$index]);
+                return $needle;
+            }
+            $index++;
+        }
+        return null;
     }
 }

@@ -1,3 +1,7 @@
+<?php
+    include_once ('managers/SessionManager.php');
+    SessionManager::start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

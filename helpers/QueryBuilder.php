@@ -55,6 +55,11 @@ class QueryBuilder
         return $this;
     }
 
+    public function delete() {
+        $this->query = 'DELETE FROM $this->table';
+        return $this;
+    }
+
     /**
      *
      * @param $columns
@@ -66,7 +71,7 @@ class QueryBuilder
      */
     public function where($columns, $operator = null, $value = null, $condition = 'AND')
     {
-        if(strpos($this->query, "SELECT") !== 0) throw new Exception("Cannot call where on non select queries");
+        if(strpos($this->query, "SELECT") !== 0 || strpos($this->query, "DELETE") !== 0) throw new Exception("Cannot call where on non select or delete queries");
         $query = "";
         if (is_array($columns)) {
             foreach ($columns as $key => $value) {
@@ -92,6 +97,18 @@ class QueryBuilder
     public function get()
     {
         return $this->connection->get($this->toString());
+    }
+
+    public function toUsers() {
+        include_once ('models/User.php');
+        $arr = $this->get();
+        $users = [];
+        foreach ($arr as $data) {
+            $users[] =  new User($data['friend_id'],
+                $data['friend_email'], $data['password'], $data['profile_name'],
+                $data['date-started'], $data['num_of_friends']);
+        }
+        return $users;
     }
 
     private function processColumn($key, $column)

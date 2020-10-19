@@ -15,6 +15,9 @@ SessionManager::start();
     <?php include ('partials/navbar.php') ?>
     <div class="px-6">
         <?php
+            $page = 1;
+            if(isset($_GET['page']))
+                $page = $_GET['page'];
             if (isset($_GET['action']) && !empty($_GET['action'])) {
                 $action = $_GET['action'];
             } else {
@@ -28,28 +31,29 @@ SessionManager::start();
         </div>
         <?php
             include_once ('managers/FriendManager.php');
-            $manager = new FriendManager(SessionManager::getAuthenticatedUser());
-            print_r($manager->findMutualFriends(19));
             if($action == "my_friends") {
-                include "partials/friendlist.php";
+                include ("partials/friendlist.php");
             } else if ($action == 'add_friends') {
                 include "partials/friendadd.php";
             }
         ?>
         <div class="flex justify-between w-full border-t border-gray-500 text-gray-200 mt-20">
-            <a href="#" class="p-5">
+            <a href="profile.php?action=my_friends&page=<?php echo $page-1?>" class="p-5">
                 ← Previous
             </a>
             <ul class="relative inline-flex list-none">
-                <li class="relative block pt-5 px-4 border-t-2 border-blue-200 text-blue-200 -mt-px"><a href="" class="block -mt-px">1</a></li>
-                <li class="relative pt-5 px-5 -mt-px"><a href="" class="block mt-px">2</a></li>
-                <li class="relative pt-5 px-5 -mt-px"><a href="" class="block mt-px">3</a></li>
-                <li class="relative pt-5 px-5 -mt-px"><span class="block mt-px">...</span></li>
-                <li class="relative pt-5 px-5 -mt-px"><a href="" class="block mt-px">8</a></li>
-                <li class="relative pt-5 px-5 -mt-px"><a href="" class="block mt-px">9</a></li>
-                <li class="relative pt-5 px-5 -mt-px"><a href="" class="block mt-px">10</a></li>
+                    <?php
+                    $manager = new FriendManager();
+                    for ($i = 1; $i  < $manager->getPages() + 1; $i++) {
+                        if ($i == $page) {
+                            echo '<li class="relative block pt-5 px-4 border-t-2 border-blue-200 text-blue-200 -mt-px"><a href="#" class="block -mt-px">'. $i .'</a></li>';
+                        } else {
+                            echo '<li class="relative pt-5 px-5 -mt-px"><a href="profile.php?action=my_friends&page='.$i.'"' . 'class="block mt-px">' . $i . '</a></li>';
+                        }
+                    }
+                ?>
             </ul>
-            <a href="#" class="p-5">
+            <a href="profile.php?action=my_friends&page=<?php echo $page+1?>" class="p-5">
                 Next →
             </a>
         </div>
