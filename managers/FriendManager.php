@@ -29,14 +29,14 @@ class FriendManager
         QueryBuilder::table('my_friends')->insert(['friend_id_1'=> $this->userId, 'friend_id_2'  => $id])->execute();
     }
     public function removeFriend($id) {
-        QueryBuilder::table('my_friends')->delete()->where(['friend_id_1'=> $this->userId, 'friend_id_2'  => $id])->execute();
+        QueryBuilder::table('my_friends')->delete()->where([['friend_id_1', '=', $this->userId], ['friend_id_2', '=', $id]])->execute();
     }
     public function paginate($page, $arr) {
-        return array_slice($arr, $page == 1 ? 0 : $page* 6,6);
+        return array_slice($arr, ($page -1) * 6,6);
 
     }
-    public function getPages() {
-        return ceil($this->getFriendCount()/6);
+    public function getPages($all = false) {
+        return ceil(($all ? count($this->getAllUsers()) :$this->getFriendCount())/6);
     }
     public function  findMutualFriends($userId) {
         // Return empty array if user has no friends.

@@ -22,8 +22,10 @@ SessionManager::start();
                 $action = $_GET['action'];
             } else {
                 $_GET['error'] = "Cannot process action. Please press the back button to return to the previous page.";
+                include ('partials/errors.php');
+                return;
             }
-        include ('partials/errors.php');
+
         ?>
         <div class="flex items-center justify-center mt-6">
             <a href="profile.php?action=my_friends" class="px-3 py-2 mx-2 <?php echo $action == "my_friends" ? "bg-blue-200 text-blue-800 rounded-md font-medium" : ""?> text-sm">My Friends</a>
@@ -38,22 +40,22 @@ SessionManager::start();
             }
         ?>
         <div class="flex justify-between w-full border-t border-gray-500 text-gray-200 mt-20">
-            <a href="profile.php?action=my_friends&page=<?php echo $page-1?>" class="p-5">
+            <a href="profile.php?action=<?php echo $action ?>&page=<?php echo $page-1?>" class="p-5">
                 ← Previous
             </a>
             <ul class="relative inline-flex list-none">
                     <?php
                     $manager = new FriendManager();
-                    for ($i = 1; $i  < $manager->getPages() + 1; $i++) {
+                    for ($i = 1; $i  < $manager->getPages($action == 'add_friends') + 1; $i++) {
                         if ($i == $page) {
-                            echo '<li class="relative block pt-5 px-4 border-t-2 border-blue-200 text-blue-200 -mt-px"><a href="#" class="block -mt-px">'. $i .'</a></li>';
+                            echo '<li class="relative block pt-5 px-5 border-t-2 border-blue-200 text-blue-200 -mt-px"><a href="#" class="block -mt-px">'. $i .'</a></li>';
                         } else {
-                            echo '<li class="relative pt-5 px-5 -mt-px"><a href="profile.php?action=my_friends&page='.$i.'"' . 'class="block mt-px">' . $i . '</a></li>';
+                            echo '<li class="relative pt-5 px-5 -mt-px"><a href="profile.php?action='.$action.'&page='.$i.'"' . 'class="block mt-px">' . $i . '</a></li>';
                         }
                     }
                 ?>
             </ul>
-            <a href="profile.php?action=my_friends&page=<?php echo $page+1?>" class="p-5">
+            <a href="profile.php?action=<?php echo $action ?>&page=<?php echo $page+1?>" class="p-5">
                 Next →
             </a>
         </div>

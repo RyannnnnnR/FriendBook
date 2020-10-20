@@ -14,7 +14,7 @@
             <div class="p-6">
                 <div class="flex  justify-between">
                     <div class="">
-                        <h4 class="text-gray-400 inline"><?php echo $user->getDisplayName() ?><span class="bg-blue-200 inline-flex justify-between rounded-full px-2 text-xs text-blue-900 ml-2 leading-5 font-semibold"><?php echo $manager->getMutualFriendCount($user->getId())?><span class="font-normal ml-1"> Mutual Friends</span></span></h4>
+                        <h4 class="text-gray-400 inline"><?php echo $user->getDisplayName() ?><a href="mutualfriends.php?id=<?php echo $user->getId() ?>"><span class="bg-blue-200 inline-flex justify-between rounded-full px-2 text-xs text-blue-900 ml-2 leading-5 font-semibold"><?php echo $manager->getMutualFriendCount($user->getId())?><span class="font-normal ml-1"> Mutual Friends</span></span></a></h4>
                         <p class="text-gray-200 text-sm"><?php echo $user->getEmail() ?></p>
                     </div>
                     <div>

@@ -1,11 +1,11 @@
 <?php
 
-include('helpers/FriendManager.php');
-include('helpers/SessionManager.php');
+include('managers/FriendManager.php');
+include('managers/SessionManager.php');
 if(isset($_GET['action'])) {
     $action = $_GET['action'];
     SessionManager::start();
-    if($action == 'add' || $action == 'delete') {
+    if($action == 'add' || $action == 'remove') {
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
             $manager = new FriendManager();
@@ -20,6 +20,7 @@ if(isset($_GET['action'])) {
             header('Location: '.$location);
         }
     } else {
-        echo "Unsupported operation";
+        $_GET['error'] = "Unsupported operation";
+        include ('partials/errors.php');
     }
 }

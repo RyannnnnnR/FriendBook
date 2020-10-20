@@ -44,7 +44,7 @@ class QueryBuilder
 
     public function insert($data, $ignore = false)
     {
-        $query = "INSERT". ($ignore ? " IGNORE ": ""). "INTO $this->table (%s) VALUES (%s)";
+        $query = "INSERT". ($ignore ? " IGNORE ": ""). " INTO $this->table (%s) VALUES (%s)";
         $columns = [];
         $values = [];
         foreach ($data as $key => $value){
@@ -56,7 +56,7 @@ class QueryBuilder
     }
 
     public function delete() {
-        $this->query = 'DELETE FROM $this->table';
+        $this->query = "DELETE FROM $this->table";
         return $this;
     }
 
@@ -71,14 +71,14 @@ class QueryBuilder
      */
     public function where($columns, $operator = null, $value = null, $condition = 'AND')
     {
-        if(strpos($this->query, "SELECT") !== 0 || strpos($this->query, "DELETE") !== 0) throw new Exception("Cannot call where on non select or delete queries");
+        if(strpos($this->query, "SELECT") !== 0 && strpos($this->query, "DELETE") !== 0) throw new Exception("Cannot call where on non select or delete queries");
         $query = "";
         if (is_array($columns)) {
             foreach ($columns as $key => $value) {
-                $query .= strpos($this->query, "WHERE") === false ? " WHERE ". implode($value, " ") : "$key $columns $operator $value";;
+                $query .= (strpos($query, "WHERE") === false) ? " WHERE ". implode($value, " ") : " ".(is_numeric($key) ? $condition : $key)." ". implode($value, " ");
             }
         } else {
-            $query = strpos($this->query, "WHERE") === false ? " WHERE $columns $operator $value" :" $condition $columns $operator $value";;
+            $query = (strpos($this->query, "WHERE") === false) ? " WHERE $columns $operator $value" :" $condition $columns $operator $value";
         }
         $this->query .= $query;
         return $this;

@@ -21,12 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="7e45ec71-514c-43fd-a6ac-df2d3f367715" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helpers/QueryBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/QueryBuilder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/managers/FriendManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/managers/FriendManager.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/partials/friendadd.php" beforeDir="false" afterPath="$PROJECT_DIR$/partials/friendadd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partials/friendlist.php" beforeDir="false" afterPath="$PROJECT_DIR$/partials/friendlist.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities.php" beforeDir="false" afterPath="$PROJECT_DIR$/utilities.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +88,7 @@
       <workItem from="1602470348390" duration="7311000" />
       <workItem from="1602920462477" duration="284000" />
       <workItem from="1602920763425" duration="25237000" />
-      <workItem from="1603189889268" duration="2714000" />
+      <workItem from="1603189889268" duration="6702000" />
     </task>
     <servers />
   </component>
@@ -121,29 +120,29 @@
       <screen x="0" y="23" width="1440" height="799" />
     </state>
     <state x="533" y="145" key="#com.intellij.ide.util.MemberChooser/0.23.1440.799@0.23.1440.799" timestamp="1602992004839" />
-    <state width="1398" height="203" key="GridCell.Tab.0.bottom" timestamp="1603189837831">
+    <state width="1398" height="201" key="GridCell.Tab.0.bottom" timestamp="1603193151558">
       <screen x="0" y="23" width="1440" height="795" />
     </state>
     <state width="1398" height="200" key="GridCell.Tab.0.bottom/0.23.1440.785@0.23.1440.785" timestamp="1601425804809" />
-    <state width="1398" height="203" key="GridCell.Tab.0.bottom/0.23.1440.795@0.23.1440.795" timestamp="1603189837831" />
+    <state width="1398" height="201" key="GridCell.Tab.0.bottom/0.23.1440.795@0.23.1440.795" timestamp="1603193151558" />
     <state width="1398" height="203" key="GridCell.Tab.0.bottom/0.23.1440.799@0.23.1440.799" timestamp="1602936368424" />
-    <state width="1398" height="203" key="GridCell.Tab.0.center" timestamp="1603189837830">
+    <state width="1398" height="201" key="GridCell.Tab.0.center" timestamp="1603193151557">
       <screen x="0" y="23" width="1440" height="795" />
     </state>
     <state width="1398" height="200" key="GridCell.Tab.0.center/0.23.1440.785@0.23.1440.785" timestamp="1601425804809" />
-    <state width="1398" height="203" key="GridCell.Tab.0.center/0.23.1440.795@0.23.1440.795" timestamp="1603189837830" />
+    <state width="1398" height="201" key="GridCell.Tab.0.center/0.23.1440.795@0.23.1440.795" timestamp="1603193151557" />
     <state width="1398" height="203" key="GridCell.Tab.0.center/0.23.1440.799@0.23.1440.799" timestamp="1602936368423" />
-    <state width="1398" height="203" key="GridCell.Tab.0.left" timestamp="1603189837827">
+    <state width="1398" height="201" key="GridCell.Tab.0.left" timestamp="1603193151556">
       <screen x="0" y="23" width="1440" height="795" />
     </state>
     <state width="1398" height="200" key="GridCell.Tab.0.left/0.23.1440.785@0.23.1440.785" timestamp="1601425804808" />
-    <state width="1398" height="203" key="GridCell.Tab.0.left/0.23.1440.795@0.23.1440.795" timestamp="1603189837827" />
+    <state width="1398" height="201" key="GridCell.Tab.0.left/0.23.1440.795@0.23.1440.795" timestamp="1603193151556" />
     <state width="1398" height="203" key="GridCell.Tab.0.left/0.23.1440.799@0.23.1440.799" timestamp="1602936368419" />
-    <state width="1398" height="203" key="GridCell.Tab.0.right" timestamp="1603189837830">
+    <state width="1398" height="201" key="GridCell.Tab.0.right" timestamp="1603193151557">
       <screen x="0" y="23" width="1440" height="795" />
     </state>
     <state width="1398" height="200" key="GridCell.Tab.0.right/0.23.1440.785@0.23.1440.785" timestamp="1601425804809" />
-    <state width="1398" height="203" key="GridCell.Tab.0.right/0.23.1440.795@0.23.1440.795" timestamp="1603189837830" />
+    <state width="1398" height="201" key="GridCell.Tab.0.right/0.23.1440.795@0.23.1440.795" timestamp="1603193151557" />
     <state width="1398" height="203" key="GridCell.Tab.0.right/0.23.1440.799@0.23.1440.799" timestamp="1602936368423" />
     <state x="442" y="150" key="NewPhpClassDialog" timestamp="1602982300271">
       <screen x="0" y="23" width="1440" height="799" />
