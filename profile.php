@@ -21,9 +21,9 @@ SessionManager::start();
             if (isset($_GET['action']) && !empty($_GET['action'])) {
                 $action = $_GET['action'];
             } else {
-                echo "Cannot process page... Please return";
-                return;
+                $_GET['error'] = "Cannot process action. Please press the back button to return to the previous page.";
             }
+        include ('partials/errors.php');
         ?>
         <div class="flex items-center justify-center mt-6">
             <a href="profile.php?action=my_friends" class="px-3 py-2 mx-2 <?php echo $action == "my_friends" ? "bg-blue-200 text-blue-800 rounded-md font-medium" : ""?> text-sm">My Friends</a>

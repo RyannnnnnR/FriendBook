@@ -7,6 +7,7 @@
     <title>FriendBook - Login</title>
 </head>
 <body class="bg-gray-800 h-screen">
+    <?php include ('partials/errors.php'); ?>
     <div class="flex items-center justify-center pb-6 px-4 h-full">
         <div class="max-w-md w-full">
             <div>

@@ -7,6 +7,7 @@ class FriendManager
     private $friends;
     private $mutuals;
     private $manager;
+    private $allUsers;
 
     public function __construct()
     {
@@ -15,6 +16,7 @@ class FriendManager
         include_once ('managers/SessionManager.php');
         SessionManager::start();
         $this->manager = new UserManager();
+        $this->allUsers = QueryBuilder::table('friends')->select()->toUsers();
         $this->userId = SessionManager::getAuthenticatedUser();
         $this->mutuals = $this->transform(QueryBuilder::table('my_friends')
             ->select()
@@ -29,23 +31,34 @@ class FriendManager
     public function removeFriend($id) {
         QueryBuilder::table('my_friends')->delete()->where(['friend_id_1'=> $this->userId, 'friend_id_2'  => $id])->execute();
     }
-    public function paginate($page) {
-        $ids = array_slice($this->friends, $page == 1 ? 0 : $page* 6,6);
-        $users = [];
-        foreach ($ids as  $id){
-            $users[] = $this->manager->findUserById($id);
-        }
-        return $users;
+    public function paginate($page, $arr) {
+        return array_slice($arr, $page == 1 ? 0 : $page* 6,6);
+
     }
     public function getPages() {
         return ceil($this->getFriendCount()/6);
     }
     public function  findMutualFriends($userId) {
-        return array_intersect($this->mutuals[$this->userId], $this->mutuals[$userId]);
+        // Return empty array if user has no friends.
+        return array_intersect($this->mutuals[$this->userId], $this->mutuals[$userId] !=  null ? $this->mutuals[$userId]: array());
     }
-
+    public function getAllUsers() {
+        return array_udiff($this->allUsers, $this->getFriends(),  function($a,$b){
+            return $a->getId() - $b->getId();
+        });
+    }
     public function getFriendCount() {
         return count($this->friends);
+    }
+    public function getFriends() {
+        $users = [];
+        foreach ($this->friends as  $id){
+            $users[] = $this->manager->findUserById($id);
+        }
+        return $users;
+    }
+    public function getMutualFriendCount($id) {
+        return count($this->findMutualFriends($id));
     }
 
 

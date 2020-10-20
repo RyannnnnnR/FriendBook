@@ -15,6 +15,7 @@
     <?php
         include ('partials/navbar.php');
         include('helpers/Schema.php');
+        include ('partials/errors.php');
         Schema::init();
     ?>
     </div>
