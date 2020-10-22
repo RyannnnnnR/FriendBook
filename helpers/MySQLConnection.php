@@ -16,15 +16,21 @@ class MySQLConnection {
     }
 
     public function execute($query){
-        $result = mysqli_query($this->connection, $query);
-        if(mysqli_error($this->connection)) {
-            die("Error executing query: ". mysqli_error($this->connection));
-        }
-        return $result;
+        return mysqli_query($this->connection, $query);
     }
 
+    public function getErrors() {
+        if(mysqli_connect_error()){
+            return mysqli_connect_error();
+        }
+        if(mysqli_error($this->connection)) {
+           return mysqli_error($this->connection);
+        }
+        return null;
+    }
     public function get($query, $mode = MYSQLI_ASSOC){
         $result = $this->execute($query);
+        if (!$result) return null;
         $tmp = mysqli_fetch_all($result, $mode);
         mysqli_free_result($result);
         return $tmp;

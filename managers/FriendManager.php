@@ -38,6 +38,9 @@ class FriendManager
     public function getPages($all = false) {
         return ceil(($all ? count($this->getAllUsers()) :$this->getFriendCount())/6);
     }
+    public function getMutualFriendPages($id) {
+        return ceil($this->getMutualFriendCount($id)/6);
+    }
     public function  findMutualFriends($userId) {
         // Return empty array if user has no friends.
         return array_intersect($this->mutuals[$this->userId], $this->mutuals[$userId] !=  null ? $this->mutuals[$userId]: array());
@@ -53,6 +56,13 @@ class FriendManager
     public function getFriends() {
         $users = [];
         foreach ($this->friends as  $id){
+            $users[] = $this->manager->findUserById($id);
+        }
+        return $users;
+    }
+    public function getMutualFriends($fId) {
+        $users = [];
+        foreach ($this->findMutualFriends($fId) as $id){
             $users[] = $this->manager->findUserById($id);
         }
         return $users;

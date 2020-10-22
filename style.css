@@ -103709,3 +103709,11 @@ video {
             animation: bounce 1s infinite;
   }
 }
+.icon:hover~#info {
+    display: block;
+    transition: 250ms ease-in-out;
+}
+.status-indicator:hover~#status {
+    display: block;
+    transition: 250ms ease-in-out;
+}

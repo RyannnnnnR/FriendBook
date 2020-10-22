@@ -92,11 +92,19 @@ class QueryBuilder
     public function execute()
     {
         $this->connection->execute($this->toString());
+        return $this;
+    }
+    public function getErrors() {
+        return $this->connection->getErrors();
     }
 
-    public function get()
+    public function get($mode = MYSQLI_ASSOC)
     {
-        return $this->connection->get($this->toString());
+        $results = $this->connection->get($this->toString(), $mode);
+        if ($results != null) {
+            return $results;
+        }
+        return $this;
     }
 
     public function toUsers() {

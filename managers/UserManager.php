@@ -16,13 +16,13 @@ class UserManager
                 return $user;
             }
         }
-        return -1;
+        return null;
     }
     public function findUserById($id) {
         $tmp =  $this->users;
         $index  = 0;
         foreach ($tmp as $user) {
-            if($user->getId() == $id){
+            if($user->getId() === $id){
                 $needle = $user;
                 unset($tmp[$index]);
                 return $needle;
