@@ -17,7 +17,7 @@ if(isset($_GET['page']))
             <div class="p-6">
                 <div class="flex  justify-between">
                     <div class="">
-                        <h4 class="text-gray-400 inline"><?php echo $user->getDisplayName()?> </span></h4>
+                        <h4 class="text-gray-400 inline"><?php echo $user->getDisplayName()?></h4>
                         <p class="text-gray-200 text-sm"><?php echo $user->getEmail()?></p>
                     </div>
                     <div>

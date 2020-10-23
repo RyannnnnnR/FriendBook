@@ -52,12 +52,12 @@ SessionManager::start();
                         if ($i == $page) {
                             echo '<li class="relative block pt-5 px-5 border-t-2 border-blue-200 text-blue-200 -mt-px"><a href="#" class="block -mt-px">'. $i .'</a></li>';
                         } else {
-                            echo '<li class="relative pt-5 px-5 -mt-px"><a href="profile.php?action='.$action.'&page='.$i.'"' . 'class="block mt-px">' . $i . '</a></li>';
+                            echo '<li class="relative pt-5 px-5 -mt-px"><a href="profile.php?action='.$action.'&page='.$i.'"' . ' class="block mt-px">' . $i . '</a></li>';
                         }
                     }
                 ?>
             </ul>
-            <a href="profile.php?action=<?php echo $action ?>&page=<?php echo $page+1?>" class="p-5">
+            <a href="profile.php?action=<?php echo $action ?>&page=<?php echo $page+1?> " class="p-5">
                 Next →
             </a>
         </div>

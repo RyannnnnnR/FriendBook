@@ -12,7 +12,7 @@ class UserManager
 
     public function findUserByEmail($email, $pass) {
         foreach ($this->users as $user) {
-            if($user->getEmail() == $email && $user->getPassword() == $pass){
+            if($user->getEmail() === $email && $user->getPassword() === $pass){
                 return $user;
             }
         }

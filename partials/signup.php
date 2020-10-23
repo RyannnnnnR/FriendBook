@@ -2,6 +2,10 @@
     $email = "";
     $displayName = "";
     $errors =  [];
+    $errors['inuse'] = 0;
+    $errors['invalidemail'] = 0;
+    $errors['invalidpassword'] = 0;
+    $errors['invaliddisplay'] = 0;
     if(isset($_GET['email']) && isset($_GET['displayName'])){
         $email = $_GET['email'];
         $displayName = $_GET['displayName'];
@@ -29,7 +33,7 @@
             </div>
             <?php  if ($errors['invalidemail'] == 1) { ?> ?>
                 <p class="text-red-500 text-sm">Invalid email provided</p>
-            <?}?>
+            <?php } ?>
             <?php if ($errors['inuse'] == 1) {  ?>
                 <p class="text-red-500 text-sm">Email already in use</p>
             <?php } ?>

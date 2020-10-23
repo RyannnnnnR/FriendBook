@@ -2,9 +2,9 @@
 include_once ('managers/SessionManager.php');
 include_once ('managers/FriendManager.php');
 include_once ('managers/UserManager.php');
+SessionManager::start();
 $manager = new FriendManager();
 $umanager = new UserManager();
-SessionManager::start();
     $id = -1;
     $page = 1;
     if(isset($_GET['id'])){

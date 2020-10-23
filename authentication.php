@@ -26,7 +26,9 @@
                 $displayName = trim($_POST['displayName']);
                 $pass = trim($_POST['password']);
                 $confirm = trim($_POST['confirm']);
-                $emails = array_column(QueryBuilder::table('friends')->select(['friend_email'])->get(),  'friend_email');
+                $emails = array_map(function($element) {
+                    return $element['friend_email'];
+                    }, QueryBuilder::table('friends')->select(['friend_email'])->get());
                 $errors = [];
                 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                     $errors['invalidemail'] = 1;

@@ -15,7 +15,6 @@ class FriendManager
         include_once ('managers/UserManager.php');
         include_once('helpers/QueryBuilder.php');
         include_once ('managers/SessionManager.php');
-        SessionManager::start();
         $this->manager = new UserManager();
         $this->userId = SessionManager::getAuthenticatedUser();
         $this->allUsers = QueryBuilder::table('friends')->select()->toUsers();
@@ -27,7 +26,7 @@ class FriendManager
         $this->mutuals = $this->transform(QueryBuilder::table('my_friends')
             ->select()
             ->get());
-        $this->friends = $this->mutuals[$this->userId];
+        $this->friends = isset($this->mutuals[$this->userId]) ? $this->mutuals[$this->userId] : array();
 
     }
 
@@ -53,7 +52,7 @@ class FriendManager
     }
     public function  findMutualFriends($userId) {
         // Return empty array if user has no friends.
-        return array_intersect($this->mutuals[$this->userId] !=  null ? $this->mutuals[$this->userId]: array(), $this->mutuals[$userId] !=  null ? $this->mutuals[$userId]: array());
+        return array_intersect(isset($this->mutuals[$this->userId])? $this->mutuals[$this->userId]: array(), isset($this->mutuals[$userId]) ? $this->mutuals[$userId]: array());
     }
     public function getAllUsers() {
         return array_udiff($this->allUsers, $this->getFriends(),  function($a,$b){

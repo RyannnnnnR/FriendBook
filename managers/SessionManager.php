@@ -23,7 +23,7 @@ class SessionManager
     }
 
     public static function isStateSet() {
-        return $_SESSION['state'] == true;
+        return self::getState() == true;
     }
     public static function getState()  {
         if(!isset($_SESSION['state'])) $_SESSION['state'] = false;

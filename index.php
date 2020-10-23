@@ -19,10 +19,6 @@
         Schema::init();
     ?>
     </div>
-<!--    <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4">-->
-<!--        <p class="font-bold">Success</p>-->
-<!--        <p>Successfully created tables</p>-->
-<!--    </div>-->
     <div class="flex mt-6">
 
         <div class="w-1/2 ml-6 mr-12">

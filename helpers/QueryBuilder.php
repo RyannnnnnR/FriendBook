@@ -122,7 +122,7 @@ class QueryBuilder
         foreach ($arr as $data) {
             $users[] =  new User($data['friend_id'],
                 $data['friend_email'], $data['password'], $data['profile_name'],
-                $data['date-started'], $data['num_of_friends']);
+                $data['date_started'], $data['num_of_friends']);
         }
         return $users;
     }
