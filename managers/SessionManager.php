@@ -21,4 +21,15 @@ class SessionManager
         session_unset();
         session_destroy();
     }
+
+    public static function isStateSet() {
+        return $_SESSION['state'] == true;
+    }
+    public static function getState()  {
+        if(!isset($_SESSION['state'])) $_SESSION['state'] = false;
+        return $_SESSION['state'];
+    }
+    public static function setState($state) {
+        $_SESSION['state'] = $state;
+    }
 }

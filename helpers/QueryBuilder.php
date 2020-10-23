@@ -60,6 +60,14 @@ class QueryBuilder
         return $this;
     }
 
+    public function update($columns) {
+        $this->query = "UPDATE $this->table SET  ";
+        foreach ($columns as $key => $value){
+            $this->query .= $key .' = '.$value;
+        }
+        return $this;
+    }
+
     /**
      *
      * @param $columns
@@ -71,7 +79,7 @@ class QueryBuilder
      */
     public function where($columns, $operator = null, $value = null, $condition = 'AND')
     {
-        if(strpos($this->query, "SELECT") !== 0 && strpos($this->query, "DELETE") !== 0) throw new Exception("Cannot call where on non select or delete queries");
+        if(strpos($this->query, "SELECT") !== 0 && strpos($this->query, "DELETE") !== 0 && strpos($this->query, "UPDATE") !== 0) throw new Exception("Cannot call where on non select, delete or update queries");
         $query = "";
         if (is_array($columns)) {
             foreach ($columns as $key => $value) {

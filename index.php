@@ -63,7 +63,7 @@
             <div id="status" class="absolute bottom-0 left-0 mt-2 mb-12 mr-4 w-1/3 rounded-md shadow-lg hidden">
                 <div class="rounded-md bg-white shadow-xs p-4 ">
                     <h2 class="text-lg"><?php echo count(Schema::getErrors()) > 0  ? "Error" : "Success"?></h2>
-                    <h3 class="text-xs"><?php echo count(Schema::getErrors()) > 0  ? "Something went wrong!" : "Successfully executed queries"?></h3>
+                    <h3 class="text-xs"><?php echo count(Schema::getErrors()) > 0  ? "Something went wrong!" : (SessionManager::isStateSet()  ? "Tables already created" :  "Successfully executed queries") ?></h3>
                     <?php if(count(Schema::getErrors()) > 0) { ?>
                         <ul class="p-4 list-disc text-sm">
                             <?php foreach (Schema::getErrors() as $error) {?>

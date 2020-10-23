@@ -8,7 +8,7 @@ SessionManager::start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>FriendBook - My Friends</title>
+    <title>FriendBook - Profile</title>
 </head>
 <body class="bg-gray-800 text-white">
 <div class="h-full">
@@ -39,13 +39,15 @@ SessionManager::start();
                 include "partials/friendadd.php";
             }
         ?>
+        <?php
+        $manager = new FriendManager();
+        if($manager->getPages($action == 'add_friends') > 0) { ?>
         <div class="flex justify-between w-full border-t border-gray-500 text-gray-200 mt-20">
             <a href="profile.php?action=<?php echo $action ?>&page=<?php echo $page-1?>" class="p-5">
                 ← Previous
             </a>
             <ul class="relative inline-flex list-none">
                     <?php
-                    $manager = new FriendManager();
                     for ($i = 1; $i  < $manager->getPages($action == 'add_friends') + 1; $i++) {
                         if ($i == $page) {
                             echo '<li class="relative block pt-5 px-5 border-t-2 border-blue-200 text-blue-200 -mt-px"><a href="#" class="block -mt-px">'. $i .'</a></li>';
@@ -59,6 +61,7 @@ SessionManager::start();
                 Next →
             </a>
         </div>
+        <?php } ?>
     </div>
 </div>
 </body>

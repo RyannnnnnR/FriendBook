@@ -21,18 +21,17 @@
   <component name="ChangeListManager">
     <list default="true" id="7e45ec71-514c-43fd-a6ac-df2d3f367715" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/about.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication.php" beforeDir="false" afterPath="$PROJECT_DIR$/authentication.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helpers/MySQLConnection.php" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/MySQLConnection.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/helpers/QueryBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/QueryBuilder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/helpers/Schema.php" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/Schema.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/managers/FriendManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/managers/FriendManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/managers/SessionManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/managers/SessionManager.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/managers/UserManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/managers/UserManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partials/errors.php" beforeDir="false" afterPath="$PROJECT_DIR$/partials/errors.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partials/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/partials/signup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.css" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutualfriends.php" beforeDir="false" afterPath="$PROJECT_DIR$/mutualfriends.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partials/friendlist.php" beforeDir="false" afterPath="$PROJECT_DIR$/partials/friendlist.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +100,8 @@
       <workItem from="1603274031766" duration="1382000" />
       <workItem from="1603275430791" duration="4863000" />
       <workItem from="1603349234204" duration="41000" />
-      <workItem from="1603349298373" duration="8799000" />
+      <workItem from="1603349298373" duration="11657000" />
+      <workItem from="1603410679117" duration="3183000" />
     </task>
     <servers />
   </component>
@@ -133,29 +133,29 @@
       <screen x="0" y="23" width="1440" height="799" />
     </state>
     <state x="533" y="145" key="#com.intellij.ide.util.MemberChooser/0.23.1440.799@0.23.1440.799" timestamp="1602992004839" />
-    <state width="1398" height="201" key="GridCell.Tab.0.bottom" timestamp="1603349274520">
+    <state width="1398" height="201" key="GridCell.Tab.0.bottom" timestamp="1603410655167">
       <screen x="0" y="23" width="1440" height="795" />
     </state>
     <state width="1398" height="200" key="GridCell.Tab.0.bottom/0.23.1440.785@0.23.1440.785" timestamp="1601425804809" />
-    <state width="1398" height="201" key="GridCell.Tab.0.bottom/0.23.1440.795@0.23.1440.795" timestamp="1603349274520" />
+    <state width="1398" height="201" key="GridCell.Tab.0.bottom/0.23.1440.795@0.23.1440.795" timestamp="1603410655167" />
     <state width="1398" height="203" key="GridCell.Tab.0.bottom/0.23.1440.799@0.23.1440.799" timestamp="1602936368424" />
-    <state width="1398" height="201" key="GridCell.Tab.0.center" timestamp="1603349274519">
+    <state width="1398" height="201" key="GridCell.Tab.0.center" timestamp="1603410655166">
       <screen x="0" y="23" width="1440" height="795" />
     </state>
     <state width="1398" height="200" key="GridCell.Tab.0.center/0.23.1440.785@0.23.1440.785" timestamp="1601425804809" />
-    <state width="1398" height="201" key="GridCell.Tab.0.center/0.23.1440.795@0.23.1440.795" timestamp="1603349274519" />
+    <state width="1398" height="201" key="GridCell.Tab.0.center/0.23.1440.795@0.23.1440.795" timestamp="1603410655166" />
     <state width="1398" height="203" key="GridCell.Tab.0.center/0.23.1440.799@0.23.1440.799" timestamp="1602936368423" />
-    <state width="1398" height="201" key="GridCell.Tab.0.left" timestamp="1603349274519">
+    <state width="1398" height="201" key="GridCell.Tab.0.left" timestamp="1603410655166">
       <screen x="0" y="23" width="1440" height="795" />
     </state>
     <state width="1398" height="200" key="GridCell.Tab.0.left/0.23.1440.785@0.23.1440.785" timestamp="1601425804808" />
-    <state width="1398" height="201" key="GridCell.Tab.0.left/0.23.1440.795@0.23.1440.795" timestamp="1603349274519" />
+    <state width="1398" height="201" key="GridCell.Tab.0.left/0.23.1440.795@0.23.1440.795" timestamp="1603410655166" />
     <state width="1398" height="203" key="GridCell.Tab.0.left/0.23.1440.799@0.23.1440.799" timestamp="1602936368419" />
-    <state width="1398" height="201" key="GridCell.Tab.0.right" timestamp="1603349274520">
+    <state width="1398" height="201" key="GridCell.Tab.0.right" timestamp="1603410655167">
       <screen x="0" y="23" width="1440" height="795" />
     </state>
     <state width="1398" height="200" key="GridCell.Tab.0.right/0.23.1440.785@0.23.1440.785" timestamp="1601425804809" />
-    <state width="1398" height="201" key="GridCell.Tab.0.right/0.23.1440.795@0.23.1440.795" timestamp="1603349274520" />
+    <state width="1398" height="201" key="GridCell.Tab.0.right/0.23.1440.795@0.23.1440.795" timestamp="1603410655167" />
     <state width="1398" height="203" key="GridCell.Tab.0.right/0.23.1440.799@0.23.1440.799" timestamp="1602936368423" />
     <state x="442" y="150" key="NewPhpClassDialog" timestamp="1602982300271">
       <screen x="0" y="23" width="1440" height="799" />
@@ -181,10 +181,10 @@
       <screen x="0" y="23" width="1440" height="799" />
     </state>
     <state x="544" y="212" key="refactoring.ChangeSignatureDialog/0.23.1440.799@0.23.1440.799" timestamp="1601807137872" />
-    <state x="385" y="145" width="670" height="673" key="search.everywhere.popup" timestamp="1603349828990">
+    <state x="385" y="145" width="670" height="673" key="search.everywhere.popup" timestamp="1603409212211">
       <screen x="0" y="23" width="1440" height="795" />
     </state>
-    <state x="385" y="145" width="670" height="673" key="search.everywhere.popup/0.23.1440.795@0.23.1440.795" timestamp="1603349828990" />
+    <state x="385" y="145" width="670" height="673" key="search.everywhere.popup/0.23.1440.795@0.23.1440.795" timestamp="1603409212211" />
     <state x="385" y="146" width="670" height="676" key="search.everywhere.popup/0.23.1440.799@0.23.1440.799" timestamp="1602926116776" />
   </component>
 </project>

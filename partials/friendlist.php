@@ -7,6 +7,9 @@ if(isset($_GET['page']))
 <div>
     <h2 class="text-2xl leading-5 my-6">My Friends</h2>
 </div>
+<?php if($manager->getFriendCount() == 0) { ?>
+    <p class="text-white">You don't have any friends yet! Click <span class="text-blue-200">'Add Friends'</span> to add some!</p>
+<?php } ?>
 <div class="grid grid-flow-row grid-cols-3 gap-6 mt-6">
     <?php foreach ($manager->paginate($page, $manager->getFriends()) as $user) { ?>
         <div class="bg-gray-700 shadow overflow-hidden sm:rounded-lg">

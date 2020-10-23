@@ -31,4 +31,11 @@ class UserManager
         }
         return null;
     }
+
+    public function createUser($email, $displayName, $password) {
+        return QueryBuilder::table('friends')->insert(['friend_email'=>$email, 'password'=>$password, 'profile_name' => $displayName, 'date_started' => date("Y-m-d"), 'num_of_friends' => 0])->execute();
+    }
+    public function refreshUsers() {
+        $this->users = QueryBuilder::table('friends')->select()->toUsers();
+    }
 }

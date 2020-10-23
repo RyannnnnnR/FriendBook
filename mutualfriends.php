@@ -20,7 +20,7 @@ SessionManager::start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>FriendBook - My Friends</title>
+    <title>FriendBook - Mutual Friends</title>
 </head>
 <body class="bg-gray-800 text-white">
 <div class="h-full">

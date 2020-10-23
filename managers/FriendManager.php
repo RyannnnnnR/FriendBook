@@ -7,6 +7,7 @@ class FriendManager
     private $friends;
     private $mutuals;
     private $manager;
+    private $user;
     private $allUsers;
 
     public function __construct()
@@ -16,8 +17,13 @@ class FriendManager
         include_once ('managers/SessionManager.php');
         SessionManager::start();
         $this->manager = new UserManager();
-        $this->allUsers = QueryBuilder::table('friends')->select()->toUsers();
         $this->userId = SessionManager::getAuthenticatedUser();
+        $this->allUsers = QueryBuilder::table('friends')->select()->toUsers();
+        // Remove ourselves from list of available friends
+        $this->allUsers = array_filter($this->allUsers, function($a) {
+            return $a->getId() !== $this->userId;
+        });
+        $this->user = $this->manager->findUserById($this->userId);
         $this->mutuals = $this->transform(QueryBuilder::table('my_friends')
             ->select()
             ->get());
@@ -26,9 +32,13 @@ class FriendManager
     }
 
     public function addFriend($id) {
+        $count = $this->user->getNumOfFriends() + 1;
+        QueryBuilder::table('friends')->update(['num_of_friends' => $count])->where('friend_id', '=', $this->userId)->execute();
         QueryBuilder::table('my_friends')->insert(['friend_id_1'=> $this->userId, 'friend_id_2'  => $id])->execute();
     }
     public function removeFriend($id) {
+        $count = $this->user->getNumOfFriends() - 1;
+        QueryBuilder::table('friends')->update(['num_of_friends' => $count])->where('friend_id', '=', $this->userId)->execute();
         QueryBuilder::table('my_friends')->delete()->where([['friend_id_1', '=', $this->userId], ['friend_id_2', '=', $id]])->execute();
     }
     public function paginate($page, $arr) {
@@ -43,17 +53,20 @@ class FriendManager
     }
     public function  findMutualFriends($userId) {
         // Return empty array if user has no friends.
-        return array_intersect($this->mutuals[$this->userId], $this->mutuals[$userId] !=  null ? $this->mutuals[$userId]: array());
+        return array_intersect($this->mutuals[$this->userId] !=  null ? $this->mutuals[$this->userId]: array(), $this->mutuals[$userId] !=  null ? $this->mutuals[$userId]: array());
     }
     public function getAllUsers() {
         return array_udiff($this->allUsers, $this->getFriends(),  function($a,$b){
+
             return $a->getId() - $b->getId();
         });
     }
     public function getFriendCount() {
+        if ($this->friends == null) return 0;
         return count($this->friends);
     }
     public function getFriends() {
+        if ($this->friends == null) return array();
         $users = [];
         foreach ($this->friends as  $id){
             $users[] = $this->manager->findUserById($id);
